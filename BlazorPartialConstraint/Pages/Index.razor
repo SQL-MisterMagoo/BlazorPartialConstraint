@@ -1,0 +1,21 @@
+﻿@page "/"
+
+
+<pre>@("<ConstrainedComponent SomeThing=\"Dummy\" TItem=\"DateTime\"></ConstrainedComponent>")</pre>
+<ConstrainedComponent SomeThing="Dummy" TItem="DateTime"></ConstrainedComponent>
+
+<pre>@("<ConstrainedComponent SomeThing=\"Tester\" TItem=\"Test\"></ConstrainedComponent>")</pre>
+<ConstrainedComponent SomeThing="Tester" TItem="Test"></ConstrainedComponent>
+
+<pre>@("<ConstrainedComponent SomeThing=\"this\" TItem=\"Index\"></ConstrainedComponent>")</pre>
+<ConstrainedComponent SomeThing="this" TItem="Index"></ConstrainedComponent>
+
+@code {
+    DateTime Dummy = new DateTime();
+    Test Tester = new Test();
+
+    class Test
+    {
+        public string Value { get; set; }
+    }
+}
